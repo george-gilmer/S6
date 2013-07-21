@@ -17,3 +17,6 @@
 
 # Ignore sass-cache stuff.
 /.sass-cache
+
+#Damn Macs
+.DS_Store
