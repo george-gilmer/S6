@@ -13,7 +13,7 @@
  *= require_tree .
  */
 
-@import "layout/*.png";
+/*@import "layout/*.png";*/
 @include all-layout-sprites;
 
 html, body {
