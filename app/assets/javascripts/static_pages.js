@@ -13,9 +13,16 @@ $(function(){
 });
 
 function navigation_circle(x,y,callback){
+  var circle = paper.circle(x,y,0) 
   if(typeof callback === 'undefined'){
-    paper.circle(x,y,0).animate({r: 25, fill: "#333", stroke: "#000", "stroke-width": 50, "stroke-opacity": 0.5},1000);
+    circle.animate({r: 25, fill: "#333", stroke: "#000", "stroke-width": 50, "stroke-opacity": 0.5},1000);
   }else{
-    paper.circle(x,y,0).animate({r: 25, fill: "#333", stroke: "#000", "stroke-width": 50, "stroke-opacity": 0.5},1000,callback());
+    circle.animate({r: 25, fill: "#333", stroke: "#000", "stroke-width": 50, "stroke-opacity": 0.5},1000,callback);
   }
+  circle.mouseover(function(){
+    this.attr({fill: '#DDD', stroke: '#333'});
+  })
+  .mouseout(function(){
+    this.attr({fill: '#333', stroke: '#000'});
+  });
 }

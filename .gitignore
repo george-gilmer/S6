@@ -18,5 +18,8 @@
 # Ignore sass-cache stuff.
 /.sass-cache
 
-#Damn Macs
+# Damn Macs
 .DS_Store
+
+# Everyone should have their own database.yml
+config/database.yml
